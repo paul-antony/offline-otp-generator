@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import OtpScanner from './OtpScanner/OtpScanner';
+
+
+
+class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      result: 'No result',
+    }
+ 
+    this.handleScan = this.handleScan.bind(this);
+    this.handleError = this.handleError.bind(this);
+  }
+  handleScan(data){
+    console.log(data);
+    if (data != null){
+      this.setState({
+        result: data,
+      })
+    }
+  }
+
+  handleError(err){
+    console.error(err)
+  }
+  render(){
+
+    return(
+      <div>
+      <OtpScanner handleScan = {this.handleScan} handleError = {this.handleError}/>
+      <p>{this.state.result}</p>
+      </div>
+    )
+  }
 }
+
+
 
 export default App;
