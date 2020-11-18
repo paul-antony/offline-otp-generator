@@ -1,12 +1,12 @@
 import QrReader from 'react-qr-scanner'
  
-function OtpScanner(params) {
+function OtpScanner(props) {
 
     return(
       <div>
         <QrReader
-          onError={params.handleError}
-          onScan={params.handleScan}
+          onError={props.handleError}
+          onScan={props.handleScan}
           />
       </div>
     )
