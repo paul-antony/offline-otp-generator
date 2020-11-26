@@ -1,17 +1,7 @@
 import React, { Component } from 'react'
-import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
+
 
 import './OtpGenerator.css';
-
-import { Grid } from '@material-ui/core';
-
-
-const classes = {
-  paper: {
-    height: 1000,
-    width: 100
-  }}
 
 
 class OtpGenerator extends Component{
@@ -52,33 +42,33 @@ class OtpGenerator extends Component{
 
 
 
-
-
     render(){
 
+      let per = 0.5 - (this.state.time /30)*0.5;
+
+      const gauge__a = {transform: `rotate(${per}turn)`};
+  
+
         return(
-          <Paper elevation={3}>
-          <Grid
-          container
-          direction="column"
-          justify="space-between"
-          alignItems="center">
 
-            <h1>{this.state.time}</h1>
-            <Grid
-            container
-            direction="row"
-            justify="center"
-            alignItems="center">
+          <div className = "otp-body">
 
-            <Paper elevation={3} ><h1>{this.state.otp.slice(0,2)}</h1></Paper>
-            <Paper elevation={3} ><h1>{this.state.otp.slice(2,4)}</h1></Paper>
-            <Paper elevation={3} ><h1>{this.state.otp.slice(4)}</h1></Paper>
-            </Grid>
-            <Button variant="contained" color="primary"onClick = {this.props.resetSecret}>Reset Secret</Button>
+            <div className="gauge">
+              <div className="gauge__body">
+                <div className = "gauge__fill" style = {gauge__a}></div>
+                <div className="gauge__cover">{30 - this.state.time}</div>
+              </div>
+            </div>
+            <div className ="otp--box">
+            <div className = " otn--number">{this.state.otp.slice(0,2)}</div>
+            <div className = "otn--number">{this.state.otp.slice(2,4)}</div>
+            <div className = "otn--number">{this.state.otp.slice(4)}</div>
+            </div>
 
-            </Grid>
-            </Paper>
+
+            <button className = "btn" onClick = {this.props.resetSecret}>Reset Secret</button>
+
+            </div>
         )
     }
 }
