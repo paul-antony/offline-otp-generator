@@ -51,7 +51,7 @@ class OtpGenerator extends Component{
 
         return(
 
-          <div className = "otp-body">
+          <div className = "otp--body">
 
             <div className="gauge">
               <div className="gauge__body">
@@ -60,9 +60,9 @@ class OtpGenerator extends Component{
               </div>
             </div>
             <div className ="otp--box">
-            <div className = " otn--number">{this.state.otp.slice(0,2)}</div>
-            <div className = "otn--number">{this.state.otp.slice(2,4)}</div>
-            <div className = "otn--number">{this.state.otp.slice(4)}</div>
+            <div className = " otp--number">{this.state.otp.slice(0,2)}</div>
+            <div className = "otp--number">{this.state.otp.slice(2,4)}</div>
+            <div className = "otp--number">{this.state.otp.slice(4)}</div>
             </div>
 
 
