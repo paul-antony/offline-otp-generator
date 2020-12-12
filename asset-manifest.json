@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/offline-otp-generator/static/css/main.44dd37c2.chunk.css",
+    "main.css": "/offline-otp-generator/static/css/main.95c902ee.chunk.css",
     "main.js": "/offline-otp-generator/static/js/main.c5827db0.chunk.js",
     "main.js.map": "/offline-otp-generator/static/js/main.c5827db0.chunk.js.map",
     "runtime-main.js": "/offline-otp-generator/static/js/runtime-main.73f63063.js",
@@ -12,7 +12,7 @@
     "static/js/3.906bd00d.chunk.js.map": "/offline-otp-generator/static/js/3.906bd00d.chunk.js.map",
     "index.html": "/offline-otp-generator/index.html",
     "static/css/2.47876dbb.chunk.css.map": "/offline-otp-generator/static/css/2.47876dbb.chunk.css.map",
-    "static/css/main.44dd37c2.chunk.css.map": "/offline-otp-generator/static/css/main.44dd37c2.chunk.css.map",
+    "static/css/main.95c902ee.chunk.css.map": "/offline-otp-generator/static/css/main.95c902ee.chunk.css.map",
     "static/js/2.37d1890c.chunk.js.LICENSE.txt": "/offline-otp-generator/static/js/2.37d1890c.chunk.js.LICENSE.txt",
     "static/media/index.css": "/offline-otp-generator/static/media/roboto-vietnamese-400-normal.52cebac0.woff2"
   },
@@ -20,7 +20,7 @@
     "static/js/runtime-main.73f63063.js",
     "static/css/2.47876dbb.chunk.css",
     "static/js/2.37d1890c.chunk.js",
-    "static/css/main.44dd37c2.chunk.css",
+    "static/css/main.95c902ee.chunk.css",
     "static/js/main.c5827db0.chunk.js"
   ]
 }
