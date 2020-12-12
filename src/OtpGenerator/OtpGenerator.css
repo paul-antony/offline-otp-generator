@@ -60,7 +60,7 @@
     border-top-right-radius: 100% 200%;
     overflow: hidden;
     background-color: #f4eeff;
-    box-shadow: 2px 2px 20px rgb(168, 165, 165);
+    /* box-shadow: 2px 2px 20px rgb(168, 165, 165); */
   }
   
   .gauge__fill{
