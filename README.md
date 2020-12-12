@@ -4,6 +4,8 @@ A react based app that can generate otp offline based on a shared secret through
 The otp is generated using the [Tiny-otp](https://www.npmjs.com/package/tiny-otp) module which generates RFC 6238 compliant time-based one-time passwords (TOTPs).
 
 ## preview
+To do a live demo visit [offline-otp-generator](http://paul-antony.github.io/offline-otp-generator) using firefox browser. The Qr scanner module works well in firefox browser.
+
 Scan the qr code containing the shared secret. This initiates the otp creator and saves the secret in local storage for future use.
 
 ![qrcode scanning](img/qrcode.png)
