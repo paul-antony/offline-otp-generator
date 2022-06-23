@@ -1,83 +1,20 @@
-import React, { Component } from 'react'
+import './App.css';
 
-import OTP from 'tiny-otp';
+export default function App() {
+  return (
+  <div>
+<div class="navbar bg-primary text-primary-content">
 
-import OtpScanner from './OtpScanner/OtpScanner';
-import OtpGenerator from './OtpGenerator/OtpGenerator'
-
-
-
-
-
-class App extends Component {
-  constructor(props){
-    super(props)
-    let secret = localStorage.getItem('secret') || null;
-    this.state = {
-      secret : secret,
-      generator : (secret != null) ?new OTP(secret,'base32'):null,
-    }
- 
-    this.handleScan = this.handleScan.bind(this);
-    this.handleError = this.handleError.bind(this);
-    this.clearSecret = this.clearSecret.bind(this);
-    // this.setOtp = this.setOtp.bind(this);
-  }
-
-
-  handleScan(data){
-    console.log(data);
-    if (data != null){
-      this.setState({
-        secret: data,
-        generator : new OTP(data,'base32'),
-      })
-      localStorage.setItem('secret', data);
-      console.log(data)
-    }
-  }
-
-  handleError(err){
-    console.error(err)
-  }
-
-  clearSecret(){
-    this.setState({secret:null,
-                  generator:null});
-
-    localStorage.removeItem("secret");
-  }
-
-
-  // setOtp(){
-  //   if (this.generator === none){
-  //       this.setState({generator : new OTP(this.secret)})
-  //   }
-  //   this.setState({otp:this.generator.getTOTP()})
-
-  // }
-  render(){
-
-    if (this.state.secret === null){
-
-    return(
-      <div>
-      <OtpScanner handleScan = {this.handleScan} handleError = {this.handleError}/>
-      <p>{this.state.secret}</p>
-      </div>
-    )}
-
-  else{
-    return(
-      <div>
-
-      <OtpGenerator generator = {this.state.generator} resetSecret = {this.clearSecret} />
-      </div>
-    )
-
-  }}
+  <div class="flex-1">
+  <a class="btn btn-ghost normal-case text-xl">daisyUI</a>
+  </div>
+  <div class="flex-none">
+    <button class="btn btn-square btn-ghost">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+    </button>
+  </div>
+</div>
+    
+    </div>
+  )
 }
-
-
-
-export default App;
